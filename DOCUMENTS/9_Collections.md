@@ -12,4 +12,3 @@ have been tested
 * The toArray() method can transform any Collection into a one-dimensional array
 * The Collection interface extends the java.lang.iterable interface - this is why we can use
 for-each loop
-* 
