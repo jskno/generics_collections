@@ -31,4 +31,4 @@ Type inference is the ability of the compiler to determine the type of argument(
 
 
 
-![TypeInference.png](TypeInference.png)
+![TypeInference.png](img/TypeInference.png)
