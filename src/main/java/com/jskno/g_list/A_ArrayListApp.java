@@ -1,9 +1,9 @@
-package com.jskno.g_array_list;
+package com.jskno.g_list;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class A_App {
+public class A_ArrayListApp {
 
     public static void main(String[] args) {
 

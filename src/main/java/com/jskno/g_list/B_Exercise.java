@@ -1,4 +1,4 @@
-package com.jskno.g_array_list;
+package com.jskno.g_list;
 
 import java.util.ArrayList;
 import java.util.List;
