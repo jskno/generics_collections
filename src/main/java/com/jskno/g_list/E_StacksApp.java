@@ -19,6 +19,8 @@ public class E_StacksApp {
     public static void main(String[] args) {
 
         Stack<String> names = new Stack<>();
+
+        // LIFO
         names.push("Adam");
         names.push("Joe");
         names.push("Ana");
