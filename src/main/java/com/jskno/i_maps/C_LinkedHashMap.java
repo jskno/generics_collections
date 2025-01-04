@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class C_LinedHashMap {
+public class C_LinkedHashMap {
 
     public static void main(String[] args) {
 
