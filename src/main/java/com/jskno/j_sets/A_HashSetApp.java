@@ -40,6 +40,7 @@ public class A_HashSetApp {
         set2.add("Ana");
 
         set.retainAll(set2);
+        System.out.println(set.containsAll(set2));
 
         System.out.println("Elements retained:");
         for(String name: set) {
