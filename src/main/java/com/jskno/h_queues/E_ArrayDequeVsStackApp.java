@@ -30,7 +30,7 @@ public class E_ArrayDequeVsStackApp {
         System.out.println("Time taken with ArrayDeque: " +
             (System.currentTimeMillis()-now) + "ms");
 
-        // In this example we insert 500.000 items into the data structure and then we keep popping (remove) all the items one by one.
+        // In this example we insert 500.000 items into the data structure, and then we keep popping (remove) all the items one by one.
         // The final running time on my machine: 13ms
 
         // *********************************************************
