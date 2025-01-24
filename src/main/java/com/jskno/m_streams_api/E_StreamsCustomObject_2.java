@@ -3,10 +3,11 @@ package com.jskno.m_streams_api;
 import com.jskno.m_streams_api.model.Book;
 import com.jskno.m_streams_api.model.Type;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
-public class D_StreamsCustomObject_1 {
+public class E_StreamsCustomObject_2 {
 
     public static void main(String[] args) {
 
@@ -20,33 +21,21 @@ public class D_StreamsCustomObject_1 {
         books.add(new Book("Franz Kafka", "The Trial", 240, Type.NOVEL));
         books.add(new Book("Albert Camus", "The Stranger", 560, Type.NOVEL));
 
-        books.forEach(System.out::println);
-
-        List<Book> novels = books.stream()
-            .filter(book -> book.getType() == Type.NOVEL)
-            .toList();
+        // Grouping by type
+        Map<Type, List<Book>> booksByType = books.stream().collect(Collectors.groupingBy(Book::getType));
+        booksByType.entrySet().forEach(System.out::println);
 
         System.out.println();
-        System.out.println("Novels:");
-        novels.forEach(System.out::println);
-
-        List<Book> sortedNovels = novels.stream()
-            .sorted(Comparator.comparing(Book::getAuthor).thenComparing(Book::getTitle))
-            .toList();
-
-        System.out.println();
-        System.out.println("Sorted Novels:");
-        sortedNovels.forEach(System.out::println);
-
-        List<String> novelTitles = books.stream()
-            .filter(book -> book.getType() == Type.NOVEL)
-            .sorted(Comparator.comparing(Book::getAuthor).thenComparing(Book::getTitle))
+        System.out.println("Largest books:");
+        // Finding 2 longest books (number of pages)
+        List<String> longestBooks = books.stream()
+            .filter(b -> b.getPages() > 500)
             .map(Book::getTitle)
+            .limit(2)
             .toList();
+        longestBooks.forEach(System.out::println);
 
-        System.out.println();
-        System.out.println("Novel Titles:");
-        novelTitles.forEach(System.out::println);
+
 
     }
 
