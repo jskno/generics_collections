@@ -1,12 +1,13 @@
 package com.jskno.n_reflection;
 
+import com.jskno.n_reflection.model.SingletonEnum;
 import com.jskno.n_reflection.model.Test;
 import com.jskno.n_reflection.model.Test2;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public class E_ReflectionConstructor {
+public class E1_ReflectionConstructor {
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
 
@@ -35,6 +36,12 @@ public class E_ReflectionConstructor {
 
         // Solution Singleton with Joshua Bloch's solution:
         // Use Enums instead of private constructor
+        SingletonEnum singletonEnum = SingletonEnum.INSTANCE;
+
+        System.out.println(singletonEnum.getName());
+        singletonEnum.setName("anotherName");
+        System.out.println(singletonEnum.getName());
+
 
 
     }
